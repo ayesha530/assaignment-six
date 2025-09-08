@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- daisy ui  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <!-- taiwind css use -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- google font use -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <!-- css use -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <title>Green-Earth</title>
+</head>
+
+<body>
+    <header class="bg-[#15803D]">
+        <div class="navbar w-11/12 mx-auto shadow-sm">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                        <li class="text-[#fff] text-[16px] font-medium font-inter"><a>About</a></li>
+                        <li class="text-[#fff] text-[16px] font-medium font-inter"><a>Gallery</a></li>
+                        <li class="text-[#fff] text-[16px] font-medium font-inter"><a>Plant a Tree</a></li>
+                    </ul>
+                </div>
+                <a class="lg:text-xl text-[#fff] text-[16px]">Green Earth</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1">
+                    <li class="text-[#fff] text-[16px] font-medium font-inter"><a>About</a></li>
+                    <li class="text-[#fff] text-[16px] font-medium font-inter"><a>Gallery</a></li>
+                    <li class="text-[#fff] text-[16px] font-medium font-inter"><a>Plant a Tree</a></li>
+
+                </ul>
+            </div>
+            <div class="navbar-end">
+                <button
+                    class="w-[131px] h-[43px] bg-[#FACC15] rounded-xl text-[#15803D] text-[16px] font-medium font-inter">Warning</button>
+            </div>
+        </div>
+    </header>
+    <!-- banner section start -->
+    <section class="banner_section bg-[#CFF0DC]">
+        <div class="grid lg:grid-cols-4 pt-8">
+            <div class="col-span-1">
+                <img src="images/hero-leaf1.png" alt="" srcset="">
+            </div>
+            <!--  -->
+            <div class=" col-span-2 flex justify-center items-center">
+                <div>
+                    <h2 class="text-[#1F2937] lg:text-[48px] font-bold font-inter mb-4">Plant a Tree, Grow a Future</h2>
+                    <p class="text-[#1F2937] font-inter text-[16px] w-[583px] text-center">Join our mission to plant 1
+                        million trees and make the Earth greener for future
+                        generations.</p>
+                    <div class="flex justify-center items-center mt-4">
+                        <button
+                            class="w-[131px] h-[43px] bg-[#FACC15] rounded-xl text-[#15803D] text-[16px] font-medium font-inter">Get
+                            Involved
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="col-span-1">
+                <img src="images/hero-leaf2.png" alt="" srcset="">
+            </div>
+            <!--  -->
+        </div>
+    </section>
+    <!-- banner section end -->
+    <!-- card section start -->
+    <section class="card_section bg-[#D9D9D9] py-10 ">
+        <div class="w-11/12 mx-auto grid grid-cols-3">
+            <!--  -->
+            <div>
+                <h4 class="text-[#000000] font-semibold font-inter text-xl mb-4">Categories</h4>
+                <div id="card_container">
+
+                </div>
+            </div>
+            <!--  -->
+
+            <div id="plant_container" class="grid grid-cols-2">
+                <div class="card bg-base-100  shadow-sm">
+                    <figure>
+                        <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                            alt="Shoes" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Card Title</h2>
+                        <p>A card component has a figure, a body part, and inside body there are title and actions parts
+                        </p>
+                        <div class="card-actions justify-end">
+                            <button class="btn btn-primary">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--  -->
+            <div>
+
+            </div>
+        </div>
+    </section>
+    <!-- card section end -->
+    <script src="script/index.js"></script>
+</body>
+
+</html>
