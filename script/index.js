@@ -11,7 +11,7 @@ const displayCategories = (categories) => {
     for (let category of categories) {
         const loadDiv = document.createElement('div');
         loadDiv.innerHTML = `
-        <button class="btn lg:w-[200px] mb-4" 
+        <button class="btn lg:w-[200px] mb-4 lesson_btn" 
         id="categoryBtn-${category.id}" 
         onclick="loadshowCategory(${category.id})"
         >
@@ -28,23 +28,27 @@ const loadshowCategory = (id) =>{
        fetch(url)
        .then(res => res.json())
        .then(data => {
+            // remove active
+            removeActive()
             // Hide all plants container
             document.getElementById('plant_container').style.display = 'none';
-            // Show category container
-            const categoryContainer = document.getElementById('category_container');
-            categoryContainer.style.display = 'grid'
-            categoryContainer.innerHTML = '';
-
-           
+            const clickBtn = document.getElementById(`categoryBtn-${id}`);
+           clickBtn.classList.add('active');           
             displayShowCategories(data.plants);
         });
 };
-
+// remove active
+const removeActive = () =>{
+    const categoryBtn = document.querySelectorAll('.lesson_btn');
+    console.log(categoryBtn);
+    categoryBtn.forEach(btn => btn.classList.remove('active'))
+}
  const displayShowCategories = (plants) =>{
-    console.log(plants)
-     const categoryContainer = document.getElementById('category_container');
    
-
+     const categoryContainer = document.getElementById('category_container');
+     categoryContainer.innerHTML = '';
+   
+     
    plants.forEach(plant => {
       const plantDiv = document.createElement('div');
       plantDiv.innerHTML = `
