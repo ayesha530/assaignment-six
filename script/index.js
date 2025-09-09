@@ -11,7 +11,7 @@ const displayCategories = (categories) => {
     for (let category of categories) {
         const loadDiv = document.createElement('div');
         loadDiv.innerHTML = `
-        <button class="btn lg:w-[200px] mb-4 lesson_btn" 
+        <button class="btn lg:w-[200px] mb-4 lesson_btn  w-auto max-sm:w-[400px]" 
         id="categoryBtn-${category.id}" 
         onclick="loadshowCategory(${category.id})"
         >
