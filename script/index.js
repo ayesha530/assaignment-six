@@ -130,12 +130,24 @@ const displayPlant = (plants) => {
     });
 
 
-
+   manageSpriner(false);
+    return
 
 
 }
+// spriner
+const manageSpriner = (status) =>{
+  if(status == true){
+    document.getElementById('sprinerManage').classList.remove('hidden');
+    document.getElementById('cart_container').classList.add('hidden')
+  }else{
+    document.getElementById('cart_container').classList.remove('hidden');
+    document.getElementById('sprinerManage').classList.add('hidden')
+  }
+}
 // details function
 const loadPlantsDetail = async(id) =>{
+    manageSpriner(true)
     const url = (`https://openapi.programming-hero.com/api/plant/${id}`);
     const res = await fetch(url);
     const data = await res.json();
